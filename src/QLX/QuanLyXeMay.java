@@ -12,7 +12,7 @@ public class QuanLyXeMay implements QuanLy<XeMay> {
 
     @Override
     public void sua(String name, XeMay xeMay) {
-
+danhSach[timKiem(name)]=xeMay;
     }
 
     @Override
@@ -51,6 +51,8 @@ public class QuanLyXeMay implements QuanLy<XeMay> {
         ql.them(xm2);
 
         ql.print();
-        System.out.println(ql.timKiem("R2"));
+        XeMay xm3 = new XeMay("Honda", " trắng", "R5", 350, 350);
+       ql.sua("R2",xm2);
+       ql.print();
     }
 }
