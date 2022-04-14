@@ -21,8 +21,14 @@ public class QuanLyXeMay implements QuanLy<XeMay> {
     }
 
     @Override
-    public XeMay timKiem(String name) {
-        return null;
+    public int timKiem(String name) {
+        for (int i = 0; i < size; i++){
+            if (name == danhSach[i].getTen()) {
+                return i;
+            }
+    }
+
+        return -1;
     }
 
     @Override
@@ -43,8 +49,8 @@ public class QuanLyXeMay implements QuanLy<XeMay> {
         XeMay xm2 = new XeMay("Honda", "Bạc trắng", "R2", 250, 400);
         ql.them(xm1);
         ql.them(xm2);
-        ql.them(xm1);
-        ql.them(xm2);
+
         ql.print();
+        System.out.println(ql.timKiem("R2"));
     }
 }
