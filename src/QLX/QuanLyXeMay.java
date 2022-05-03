@@ -1,6 +1,8 @@
 package QLX;
 
-public class QuanLyXeMay implements QuanLy<XeMay> {
+import MiniTest.DanhBa;
+
+public abstract class QuanLyXeMay implements QuanLy<XeMay> {
     private XeMay[] danhSach = new XeMay[20];
     private int size = 0;
 
@@ -44,7 +46,22 @@ public class QuanLyXeMay implements QuanLy<XeMay> {
     }
 
     public static void main(String[] args) {
-        QuanLyXeMay ql = new QuanLyXeMay();
+        QuanLyXeMay ql = new QuanLyXeMay() {
+            @Override
+            public void add(DanhBa danhBa) {
+
+            }
+
+            @Override
+            public void display() {
+
+            }
+
+            @Override
+            public int search(String name) {
+                return 0;
+            }
+        };
         XeMay xm1 = new XeMay("Yamaha", "Xanh trắng", "R3", 120, 300);
         XeMay xm2 = new XeMay("Honda", "Bạc trắng", "R2", 250, 400);
         ql.them(xm1);
